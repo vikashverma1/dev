@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HomePage</title>
+<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="http://necolas.github.io/normalize.css/3.0.1/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/header_footer.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="examples.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Pacifico:400" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="js/examples1.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            'verticalCentered': false,
+            'css3': true,
+            'sectionsColor': ['', '', '', ''],
+            'navigation': true,
+            'navigationPosition': 'right',
+            'navigationTooltips': ['', '', '', ''],
+
+            'afterLoad': function(anchorLink, index){
+                if(index == 2){
+                    $('#iphone3, #iphone2, #iphone4').addClass('active');
+                }
+            },
+
+            'onLeave': function(index, nextIndex, direction){
+                if (index == 3 && direction == 'down'){
+                    $('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
+                }
+                else if(index == 3 && direction == 'up'){
+                    $('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
+                }
+
+                $('#staticImg').toggleClass('active', (index == 2 && direction == 'down' ) || (index == 4 && direction == 'up'));
+                $('#staticImg').toggleClass('moveDown', nextIndex == 4);
+                $('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
+            }
+        });
+    });
+</script>
+
+
+</head>
+
+<body>
+<div id="loader"></div><!-- END #loader -->
+<div id="fullpage">
+	<div class="section page1" id="section0">
+		<header>
+                <div id="header" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div id="header_top">
+                 
+                    </div>
+                </div>
+                <nav>
+                    
+                </nav>
+            </header>
+        
+	</div>
+    
+	<div class="section page2" id="section1">
+        <ul class="bxslider">
+            <li class="one">
+            	<p>Innovation around Data Visualization, Cloud Services and Big Data analytics. </p>
+            </li>
+            <li class="two">
+            	<p>Integrating enterprise ‘IoT as-a-Service’ with Business Intelligence and Process Management</p>
+            </li>
+            <li class="three">
+            	<p>Maximizing return on existing IT infrastructure and future technology investments</p>
+            </li>
+            <li class="four">
+            	<p>Rolling out hybrid device solutions with ample diversity &amp; flexibility</p>
+            </li>
+            <li class="five">
+            	<p>Decision making in real time based on the stream of data</p>
+            </li>
+        </ul>
+        
+        <div id="bx-pager">
+            <a data-slide-index="0" href=""><img src="img/thumbs1.png" /></a>
+            <a data-slide-index="1" href=""><img src="img/thumbs2.png" /></a>
+            <a data-slide-index="2" href=""><img src="img/thumbs3.png" /></a>
+            <a data-slide-index="3" href=""><img src="img/thumbs4.png" /></a>
+            <a data-slide-index="4" href=""><img src="img/thumbs5.png" /></a>        </div>
+	</div>
+
+	<div class="section moveDown page3" id="section2">
+		<div class="container text_center">
+                <h1>Driven by Connected Devices, Fueled by Big Data and <br>Powered by <span>Company Name</span></h1>
+                <div class="case_studies">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center">
+                        <div class="case_box">
+                            <img src="img/logo_1.png">
+                            <p>Tailor your environment with Smart Energy Solutions  <br><a href="enlighted_case_study.html">View Case Study >></a></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center">
+                        <div class="case_box">
+                            <img src="img/logo_2.png">
+                            <p>Connecting Health & Providing Better Value <br><a href="AnD_Medical_Case_Study.html">View Case Study >></a></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                        <div class="case_box">
+                            <img src="img/logo_3.png">
+                            <p>Driving Engine Behind Intelligent Networks <br><a href="cavium_case_study.html">View Case Study >></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	</div>
+    
+    <div class="section moveDown page4" id="section3">
+        <div class="container text_center">
+            <h1>Contact us</h1>
+            <p>Being an early starter in the technology world and numerous opportunities to engage with global players has helped us to read the pulse and prepare ourselves for the onset of any technology deluge. We consider ourselves to be the harbinger in the Internet of Things as well. With the trust that our clients have put upon us, we have always supported them in technology adoptions and  transitions. We want to create an awareness regarding the opportunities that can be accomplished by their organization by being an early adopter of Internet of Things.</p>
+        </div>
+        <div id="slider" class="flexslider">
+           		<footer id="footer">
+            	
+            </footer>
+            </div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.bxslider.js"></script> 
+<script type="text/javascript" src="js/jquery.smslider.js"></script> 
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/customs_main.js"></script>
+</body>
+</html>

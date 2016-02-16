@@ -1,0 +1,22 @@
+.page1 {
+overflow:hidden;
+}
+
+.page2 {
+background: #fff !important;
+overflow:hidden;
+}
+
+.page3 {
+background:#fff !important;
+overflow:hidden;
+}
+
+.page4 {
+background:#1baede !important;
+overflow:hidden;
+}
+
+#fp-nav {
+top: 57% !important;
+}
