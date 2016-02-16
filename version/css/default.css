@@ -1,0 +1,38 @@
+.page1 {
+overflow:hidden;
+}
+.page2{
+/*background:#16a085 !important;*/
+background:url(../img/bgabout.jpg) repeat;
+	overflow:hidden;
+}
+
+.page3 {
+background: #333 !important;
+overflow:hidden;
+}
+
+.page4 {
+background:#f3f3f3 !important;
+overflow:hidden;
+}
+
+.page5 {
+background:#1baede !important;
+overflow:hidden;
+}
+
+#fp-nav {
+top: 57% !important;
+}
+ #map {
+        height: 100%;
+		top:0;
+		right:50px !important;
+		position:absolute !important;
+		height:598px !important;
+		width:900px !important;
+		border:5px solid #fff;
+      }
+#particles h3 {color:#555;}
+#particles p{color:#333;}

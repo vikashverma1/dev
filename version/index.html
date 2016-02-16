@@ -1,0 +1,381 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Index-LandingPage</title>
+<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	 <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/header_footer.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="examples.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Pacifico:400" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="js/examples1.js"></script>
+	   <script type='text/javascript' src='js/jquery.particleground.js'></script>
+	    
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            'verticalCentered': false,
+            'css3': true,
+            'sectionsColor': ['', '', '', ''],
+            'navigation': true,
+            'navigationPosition': 'right',
+            'navigationTooltips': ['', '', '', ''],
+
+            'afterLoad': function(anchorLink, index){
+                if(index == 2){
+                    $('#iphone3, #iphone2, #iphone4').addClass('active');
+                }
+            },
+
+            'onLeave': function(index, nextIndex, direction){
+                if (index == 3 && direction == 'down'){
+                    $('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
+                }
+                else if(index == 3 && direction == 'up'){
+                    $('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
+                }
+
+                $('#staticImg').toggleClass('active', (index == 2 && direction == 'down' ) || (index == 4 && direction == 'up'));
+                $('#staticImg').toggleClass('moveDown', nextIndex == 4);
+                $('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
+            }
+        });
+		 
+            $('.case_box img').hover(
+               function () {
+                 $(this).next("h2").css({"color":"#33cbfd"});
+               }, 
+               function () { 
+				    $(this).next("h2").css({"color":"#333"});
+               }
+            );
+    });
+</script>
+
+
+</head>
+
+<body>
+<div id="loader"></div><!-- END #loader -->
+<div id="fullpage">
+	<div class="section page1" id="section0">
+		<header>
+                <div id="header" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div id="header_top">
+                        <div id="locations">
+                            <ul>
+                                <li>NEW YORK</li> |
+                                <li>SAN FRANCISCO</li>|
+                                <li>LOS ANGELES</li>|
+                                <li>PHOENIX</li>|
+                                <li>CARLSBAD</li>|
+                                <li>FORT LAUDERDALE</li>|
+                                <li>SANTA CLARA</li>
+                            </ul>
+                        </div>
+                        <div id="logo_mp" class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                          <a href="/">
+                              <img src="img/logo.png" alt="logo">
+                            </a>
+                        </div>
+                    	<div id="contact_no_2" class="col-xs-12 col-sm-9 col-md-9 col-lg-9 text-right">
+                        	<div id="number">Toll Free: (61) xxxx xxxx</div>
+                        </div>
+                    </div>
+                </div>
+               
+            </header>
+        <div class="container_fluid text_center">
+
+			<video data-video-background="" class="section__background" src="img/homepage_top.mp4" poster="img/homepage_top.jpg" loop data-width="960" data-height="540" autoplay></video>
+					
+			<div class="video_content">
+			<div class="video-play-button"></div>
+                <h1>To Reimagine The Future<br> We're <span>Rewriting The Rules</span></h1>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 base_links_home">
+                	<div id="slideshow2">
+                    	<div>
+                        	<div class="main">
+                                <img src="img/icon8.png">
+                                <h3>Motion Detectors</h3>
+                            </div>
+                            <p>Intelligent sensors that understand motion</p>
+                        </div>
+                        <div>
+                        	<div class="main">
+                                <img src="img/icon6.png">
+                                <h3>Digital Accelerometers</h3>
+                            </div>
+                            <p>Advanced motion recognition by integrating or connecting to smart devices</p>
+                        </div>
+                        <div>
+                        	<div class="main">
+                                <img src="img/icon7.png">
+                                <h3>GPS Awareness</h3>
+                            </div>
+                            <p>Real time tracking with robust positioning systems</p>
+                        </div>
+                        <div>
+                        	<div class="main">
+                                <img src="img/icon10.png">
+                                <h3>Barcode Readers &amp; QR Code Readers</h3>
+                            </div>
+                            <p>Smart Decoders meant for smart phones</p>
+                        </div>
+                        <div>
+                        	<div class="main">
+                                <img src="img/icon5.png">
+                                <h3>RFID</h3>
+                            </div>
+                            <p>Intelligent bar codes that seamlessly track product inventory</p>
+                        </div>
+                        <div>
+                        	<div class="main">
+                                <img src="img/icon4.png">
+                                <h3>NFC</h3>
+                            </div>
+                            <p>Connecting devices With Just A Tap </p>
+                        </div>
+                        <div>
+                        	<div class="main">
+                                <img src="img/icon3.png">
+                                <h3>Wi-Fi</h3>
+                            </div>
+                            <p>When intelligent networks become wireless</p>
+                        </div>
+                        <div>
+                        	<div class="main">
+                                <img src="img/icon11.png">
+                                <h3>Bluetooth Low Energy</h3>
+                            </div>
+                            <p>Share intelligently with most widely used wireless sharing technology</p>
+                        </div>
+                        <div>
+                        	<div class="main">
+                                <img src="img/icon2.png">
+                                <h3>XBee</h3>
+                            </div>
+                            <p>Smart modules that add data analysis to IOT mixture</p>
+                        </div>
+                        <div>
+                        	<div class="main">
+                                <img src="img/icon1.png">
+                                <h3>Zigbee</h3>
+                            </div>
+                            <p>Intelligent wireless sensors to control smart networks</p>
+                        </div>
+                        <div>
+                        	<div class="main">
+                                <img src="img/icon9.png">
+                                <h3>Z-Wave</h3>
+                            </div>
+                            <p>Wireless communications protocol designed for home automation</p>
+                        </div>
+                        <div>
+                        	<div class="main">
+                                <img src="img/icon12.png">
+                                <h3>Wireless M-Bus</h3>
+                            </div>
+                            <p>Industry standards that drive smart metering</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			</div>
+	</div>
+    	<!--Page1 ends here -->
+	<div class="section moveDown page2" id="section1">
+		<div class="container text_center" id="particles">
+	
+              <div id="intro" class="animated bounce">
+                <h3>STARTING WITH AN<br> <br>EXHILARATING HUMAN EXPERIENCE</h3> <br>
+                <p>It’s a rare moment in time, when new technologies can be applied in ways that aren’t limited by the old rules. With a commitment to invention, we’re elevating every aspect of the automotive experience: performance, beauty and space.</p> 
+              </div>
+        </div>
+	</div>
+		<!--Page2 ends here -->
+	
+	<div class="section page3" id="section2">
+        <ul class="bxslider">
+            <li class="one">
+            	<p>Innovation around Data Visualization, Cloud Services and Big Data analytics. </p>
+            </li>
+            <li class="two">
+            	<p>Integrating enterprise ‘IoT as-a-Service’ with Business Intelligence and Process Management</p>
+            </li>
+            <li class="three">
+            	<p>Maximizing return on existing IT infrastructure and future technology investments</p>
+            </li>
+            <li class="four">
+            	<p>Rolling out hybrid device solutions with ample diversity &amp; flexibility</p>
+            </li>
+            <li class="five">
+            	<p>Decision making in real time based on the stream of data</p>
+            </li>
+        </ul>
+        
+        <div id="bx-pager">
+            <a data-slide-index="0" href=""><img src="img/thumbs1.png"></a>
+            <a data-slide-index="1" href=""><img src="img/thumbs2.png"></a>
+            <a data-slide-index="2" href=""><img src="img/thumbs3.png"></a>
+            <a data-slide-index="3" href=""><img src="img/thumbs4.png"></a>
+            <a data-slide-index="4" href=""><img src="img/thumbs5.png"></a>        
+		</div>
+	</div>
+		<!--Page3 ends here -->
+		<div class="section moveDown page4" id="section3">
+		<div class="container text_center">
+              
+                <div class="case_studies">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center">
+                        <div class="case_box">
+                            <img src="img/checkpoint.png" onmouseover="this.src='img/checkpoint_h.png'" onmouseout="this.src='img/checkpoint.png'" >
+							<h2>CheckPoint Tour System</h2>
+                            <p>Get real-time updates for every checkpoint scanned on your guard tours – Rugged and accurate RFID tokens are simple to install and inexpensive – Store reports and messages to checkpoints. </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center">
+                        <div class="case_box">
+                            <img src="img/report.png" onmouseover="this.src='img/report_h.png'" onmouseout="this.src='img/report.png'" >
+							<h2>Incident Reports</h2>
+                            <p>Create customizable and searchable activity and incident reports – Robust data collection fields such as pictures and signatures – Download or email reports instantly from the TrackTik dashboard. </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                        <div class="case_box">
+                            <img src="img/gps.png" onmouseover="this.src='img/gps_h.png'" onmouseout="this.src='img/gps.png'" >
+							<h2>GPS Tracking</h2>
+                            <p>View real-time GPS locations of your entire remote workforce – Searchable history of reports and shifts by GPS locations – Watch your entire operation traveling between locations. </p>
+                        </div>
+                    </div>
+                </div>
+				
+				     <div class="case_studies">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center">
+                        <div class="case_box">
+                            <img src="img/time.png" onmouseover="this.src='img/time_h.png'" onmouseout="this.src='img/time.png'" >
+							<h2>Watch Mode</h2>
+                            <p>Capture videos of every intervention made by your guards – Additional accountability of video recording will deter violent acts – Use real-life video to create situational training tools.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center">
+                        <div class="case_box">
+                            <img src="img/tool.png" onmouseover="this.src='img/tool_h.png'" onmouseout="this.src='img/tool.png'" >
+							<h2>Customizable Platform</h2>
+                            <p>TrackTik provides a suite of tools to support your unique operation – Create the permissions and roles required for your staff – Easy-to-use drag-and-drop interfaces. </p>
+                        </div>
+                    </div>
+					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center">
+                        <div class="case_box">
+                            <img src="img/alert.png" onmouseover="this.src='img/alert_h.png'" onmouseout="this.src='img/alert.png'" >
+							<h2>Real-Time Alerts</h2>
+                            <p>Get instant updates via your dashboard, SMS, or email – Send alerts in real-time to checkpoints and your remote staff – Get notified when a staffer has not logged activities. </p>
+                        </div>
+                    </div>
+              
+                </div>
+				
+				
+				
+            </div>
+	</div>
+		<!--Page4 ends here -->
+	<div class="section page5" id="section4">
+    
+     
+        
+	</div>
+	
+	<!--Page5 ends here -->
+	
+    <div class="section moveDown page6" id="section5">
+        <div class="container text_center">
+           
+    <address>  
+ <h1>CONTACT</h1><br>	
+		GENERAL<br>
+		Company Name<br>
+		125 Constitution Drive<br>
+		Quark City<br>
+		CA 94025<br>
+		Sydney<br>
+		Phone: (61) xxxx xxxx<br>
+		Email: <a href="mailto:company@name.com">company@name.com</a><br><br><br>
+		JOIN Company Name<br>
+		Explore our <a href="#">open roles</a> section
+	</address>
+	 <div id="map" style="width: 500px; height: 400px;"></div>
+        </div>
+        <div id="slider" class="flexslider">
+           		<footer id="footer">
+            	<div class="button_container"></div>
+                    
+                </div>
+                <div class="btm">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 foot_link">
+                        <ul id="footer_links">
+                            <li><a href="#">About Us</a></li>|
+                            <li><a href="#">Site Map</a></li>|
+                            <li><a href="#" target="_blank">Blog</a></li>|
+                            <li><a href="#">Terms &amp; Conditions</a></li>|
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                        <div class="btm_txt">
+                            &copy; Copyright 2016 Company Name. All Rights Reserved.
+						</div>
+                    </div>
+					
+                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                        <div class="btm_icon">
+                            <span class="icon">
+                                <a href="#" target="_blank">
+                                <img src="img/rss_icon.png" onmouseover="this.src='img/rss_icon_o.png'" onmouseout="this.src='img/rss_icon.png'"></a>                            
+                            </span>
+                            <span class="icon">
+                                <a href="#" target="_blank">
+                                <img id="fbs" src="img/fcebok_icon.png" onmouseover="this.src='img/fcebok_icon_o.png'" onmouseout="this.src='img/fcebok_icon.png'"></a>                            
+                            </span>
+                            <span class="icon">
+                                <a href="#" target="_blank">
+                                <img src="img/twitter_icon.png" onmouseover="this.src='img/twitter_icon_o.png'" onmouseout="this.src='img/twitter_icon.png'">                            </a>                            
+                            </span>
+                            <span class="icon"><a href="#" target="_blank">
+                            	<img src="img/linkin_icon.png" onmouseover="this.src='img/linkin_icon_o.png'" onmouseout="this.src='img/linkin_icon.png'"></a>                            
+                          	</span>                        
+                            </div>
+                    </div>
+                </div>
+            </footer>
+            </div>
+		<!--Page6 ends here -->
+	</div>
+    <div class="fixedBg"></div>
+</div>
+<script type="text/javascript" src="js/jquery.bxslider.js"></script> 
+<script type="text/javascript" src="js/jquery.smslider.js"></script> 
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/customs_main.js"></script>
+ <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+   <script type='text/javascript' src='js/map.js'></script>
+</body>
+</html>
